@@ -6,17 +6,16 @@ from scipy.spatial import distance as dist
 import imutils
 import mediapipe as mp
 import time
-
+import requests  
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands 
-capture = cv2.VideoCapture(1)#doidcam 3
+capture = cv2.VideoCapture(2)#doidcam 3
 centoids = {'1'}
 arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_7X7_50)
 arucoParams = cv2.aruco.DetectorParameters_create()
 distance = 0
 shot_measure = []
-distance_scale = 0
-
+distance_scale = 0     
 with mp_hands.Hands(
     static_image_mode=False,
     max_num_hands=2,
