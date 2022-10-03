@@ -7,6 +7,8 @@ import imutils
 import mediapipe as mp
 import time
 import requests  
+
+url="http://127.0.0.1:8000/measures/"
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands 
 capture = cv2.VideoCapture(2)#doidcam 3
@@ -89,6 +91,10 @@ with mp_hands.Hands(
                         if len(shot_measure)>=5:
                             frames_sum = sum(shot_measure)
                             shot_average = frames_sum/5
+                            payload = {"reference":"12345",
+                            "name":"manga",
+                            "cm":shot_average}
+                            response = requests.post(url)
                             print('--------Promedio de muestra--------')
                             print(shot_average)
                             print('-----------------------------------')
