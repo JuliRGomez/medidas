@@ -1,16 +1,15 @@
 
-from turtle import width
-import numpy as np
+import numpy as np  
 import cv2
 from scipy.spatial import distance as dist
 import imutils
 import mediapipe as mp
 import time
-from utils import area_detection,area_trace
+from _utils import area_detection,area_trace
 
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands 
-capture = cv2.VideoCapture(1)#doidcam 3
+capture = cv2.VideoCapture(0)#doidcam 3
 distance = 0
 shot_measure = []
 distance_scale = 0
