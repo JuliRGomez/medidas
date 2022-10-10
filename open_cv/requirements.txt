@@ -16,4 +16,4 @@ pyparsing==3.0.9
 python-dateutil==2.8.2
 scipy==1.9.1
 six==1.16.0
--e git+https://github.com/JuliRGomez/medidas.git@8e0ed6043d84439a5d15c5893eab106a32051680#egg=utils&subdirectory=open_cv
+
