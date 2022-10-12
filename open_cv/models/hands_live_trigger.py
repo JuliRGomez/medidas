@@ -10,7 +10,7 @@ import time
 url="http://127.0.0.1:8000/measures/"
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands 
-capture = cv2.VideoCapture(0)#doidcam 3
+capture = cv2.VideoCapture(1,cv2.CAP_DSHOW)#doidcam 3
 centoids = {'1'}
 arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_7X7_50)
 arucoParams = cv2.aruco.DetectorParameters_create()
