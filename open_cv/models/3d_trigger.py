@@ -8,7 +8,7 @@ import time
 
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands 
-capture = cv2.VideoCapture(1)#doidcam 3
+capture = cv2.VideoCapture(2,cv2.CAP_DSHOW)#doidcam 3
 arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_7X7_50)
 arucoParams = cv2.aruco.DetectorParameters_create()
 shot_measure = []
